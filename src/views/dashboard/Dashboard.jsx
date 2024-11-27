@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Grid, Box } from '@mui/material';
 import PageContainer from 'src/components/container/PageContainer';
 
@@ -9,9 +9,21 @@ import RecentTransactions from './components/RecentTransactions';
 import ProductPerformance from './components/ProductPerformance';
 import Blog from './components/Blog';
 import MonthlyEarnings from './components/MonthlyEarnings';
+import { useFrappeGetDocList } from 'frappe-react-sdk';
 
 
 const Dashboard = () => {
+
+  const [call] = useFrappeGetDocList();
+
+  useEffect(() => {
+    call("Tests")
+      .then(res => {
+        console.log(res);
+      })
+  }, [])
+
+
   return (
     <PageContainer title="Dashboard" description="this is Dashboard">
       <Box>

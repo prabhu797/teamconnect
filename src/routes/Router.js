@@ -20,6 +20,7 @@ const Shadow = Loadable(lazy(() => import('../views/utilities/Shadow')))
 const Error = Loadable(lazy(() => import('../views/authentication/Error')));
 const Register = Loadable(lazy(() => import('../views/authentication/Register')));
 const Login = Loadable(lazy(() => import('../views/authentication/Login')));
+const LoggedIn = Loadable(lazy(() => import('../views/authentication/LoggedIn')));
 
 // import LoginPage from 'src/devComponents/login/LoginPage';
 
@@ -29,6 +30,7 @@ const Router = [
     element: <FullLayout />,
     children: [
       { path: '/', element: <Navigate to="/dashboard" /> },
+      { path: '/loggedin', exact: true, element: <LoggedIn /> },
       { path: '/dashboard', exact: true, element: <Dashboard /> },
       { path: '/leads-info', exact: true, element: <LeadsInfo /> },
       { path: '/follow-up-today', exact: true, element: <FollowUpToday /> },
