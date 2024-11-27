@@ -1,21 +1,47 @@
-import path from 'path';
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react-swc';  // Or '@vitejs/plugin-react' if you're using Babel
+import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
+import fs from 'fs/promises';
+import svgr from '@svgr/rollup';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
   server: {
-    port: 5173,
-  },
+		port: 8080,
+	},
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
+      src: resolve(__dirname, 'src'),
     },
   },
   esbuild: {
-    loader: {
-      '.js': 'jsx', // Ensure .js files are treated as JSX
+    loader: 'jsx',
+    include: /src\/.*\.jsx?$/,
+    exclude: [],
+  },
+
+  optimizeDeps: {
+    esbuildOptions: {
+      loader: {
+        '.js': 'jsx',
+      },
+      plugins: [
+        {
+          name: 'load-js-files-as-jsx',
+          setup(build) {
+            build.onLoad({ filter: /src\\.*\.js$/ }, async (args) => ({
+              loader: 'jsx',
+              contents: await fs.readFile(args.path, 'utf8'),
+            }));
+          },
+        },
+      ],
     },
   },
+
+  // plugins: [react(),svgr({
+  //   exportAsDefault: true
+  // })],
+
+  plugins: [svgr(), react()],
 });
