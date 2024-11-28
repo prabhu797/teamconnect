@@ -45,7 +45,7 @@ const Header = (props) => {
 
         <Box flexGrow={1} >
           <Typography variant='h2'>
-            Pre-Sales Dashboard
+            TeamConnect
           </Typography>
         </Box>
         <IconButton

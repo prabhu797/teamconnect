@@ -3,7 +3,7 @@ import { Grid, Box, Card, Typography, Stack } from '@mui/material';
 import { Link } from 'react-router-dom';
 import PageContainer from 'src/components/container/PageContainer';
 import Logo from 'src/layouts/full/shared/logo/Logo';
-import AuthRegister from './auth/AuthRegister';
+// import AuthRegister from './auth/AuthRegister';
 
 const Register2 = () => (
   <PageContainer title="Register" description="this is Register page">
@@ -37,7 +37,7 @@ const Register2 = () => (
             <Box display="flex" alignItems="center" justifyContent="center">
               <Logo />
             </Box>
-            <AuthRegister
+            {/* <AuthRegister
               subtext={
                 <Typography variant="subtitle1" textAlign="center" color="textSecondary" mb={1}>
                   Your Social Campaigns
@@ -61,7 +61,7 @@ const Register2 = () => (
                   </Typography>
                 </Stack>
               }
-            />
+            /> */}
           </Card>
         </Grid>
       </Grid>

@@ -14,14 +14,9 @@ import { useFrappeGetDocList } from 'frappe-react-sdk';
 
 const Dashboard = () => {
 
-  const [call] = useFrappeGetDocList();
-
-  useEffect(() => {
-    call("Tests")
-      .then(res => {
-        console.log(res);
-      })
-  }, [])
+  const {data, error} = useFrappeGetDocList("Tests");
+  console.log("data ", data);
+  console.log("error ", error);
 
 
   return (

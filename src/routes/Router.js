@@ -18,9 +18,9 @@ const Icons = Loadable(lazy(() => import('../views/icons/Icons')))
 const TypographyPage = Loadable(lazy(() => import('../views/utilities/TypographyPage')))
 const Shadow = Loadable(lazy(() => import('../views/utilities/Shadow')))
 const Error = Loadable(lazy(() => import('../views/authentication/Error')));
-const Register = Loadable(lazy(() => import('../views/authentication/Register')));
 const Login = Loadable(lazy(() => import('../views/authentication/Login')));
 const LoggedIn = Loadable(lazy(() => import('../views/authentication/LoggedIn')));
+const Logout = Loadable(lazy(() => import('../views/authentication/Logout')));
 
 // import LoginPage from 'src/devComponents/login/LoginPage';
 
@@ -49,7 +49,7 @@ const Router = [
     element: <BlankLayout />,
     children: [
       { path: '404', element: <Error /> },
-      { path: '/auth/register', element: <Register /> },
+      { path: 'logout', element: <Logout /> },
       { path: '/auth/login', element: <Login /> },
       { path: '*', element: <Navigate to="/auth/404" /> },
     ],

@@ -149,10 +149,10 @@ const pageLinks = [
     href: '/auth/login',
     title: 'Authentication Design'
   },
-  {
-    href: '/auth/register',
-    title: 'Register Now'
-  },
+  // {
+  //   href: '/auth/register',
+  //   title: 'Register Now'
+  // },
   {
     href: '/404',
     title: '404 Error Page'
