@@ -9,14 +9,20 @@ import RecentTransactions from './components/RecentTransactions';
 import ProductPerformance from './components/ProductPerformance';
 import Blog from './components/Blog';
 import MonthlyEarnings from './components/MonthlyEarnings';
-import { useFrappeGetDocList } from 'frappe-react-sdk';
+import { useFrappeEventListener, useFrappeGetDocList } from 'frappe-react-sdk';
 
 
 const Dashboard = () => {
 
-  const {data, error} = useFrappeGetDocList("Tests");
+  const { data, error } = useFrappeGetDocList("User");
   console.log("data ", data);
   console.log("error ", error);
+
+
+  useFrappeEventListener("msgprint", (data) => {
+    console.log(data);
+  });
+  console.log("----------Listening------------");
 
 
   return (
