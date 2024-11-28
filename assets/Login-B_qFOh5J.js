@@ -1,0 +1,1 @@
+import{r}from"./index-BJ3GtGGy.js";function n(){const t="novelhouston.com",e="2l9s5n1pj1",o="https://prabhu797.github.io/dashboard/loggedin";return r.useEffect(()=>{window.location.href=`https://${t}/api/method/frappe.integrations.oauth2.authorize?client_id=${e}&redirect_uri=${o}&response_type=code`},[]),"Login"}export{n as default};
