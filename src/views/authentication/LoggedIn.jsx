@@ -9,7 +9,7 @@ export default function LoggedIn({ setToken }) {
     const navigate = useNavigate();
     const clientId = "2l9s5n1pj1";
     const frappeServer = "novelhouston.com"
-    const redirectURL = "https://prabhu797.github.io/dashboard/loggedin";
+    const redirectURL = "https://prabhu797.github.io/teamconnect/loggedin";
 
     useEffect(() => {
         // Function to get query parameters
