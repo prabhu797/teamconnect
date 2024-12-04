@@ -22,7 +22,7 @@ const SECRET_PASSKEY = "P@r7a9b9h7U";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Suspense>
-    <BrowserRouter basename='/teamconnect'>
+    <BrowserRouter basename='/'>
 
         <App />
     </BrowserRouter>
