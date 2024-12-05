@@ -26,3 +26,6 @@ TeamConnect is a project aimed at exploring and establishing a connection betwee
 3). Set up OAuth2 by configuring the necessary keys and tokens for Frappe integration.
 4). Install the required dependencies for the React app.
 5). Run the React app and verify that the OAuth2 authentication works.
+
+
+Note: Application has been deployed using github pages, please checkout.
