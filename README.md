@@ -28,4 +28,4 @@ TeamConnect is a project aimed at exploring and establishing a connection betwee
 5). Run the React app and verify that the OAuth2 authentication works.
 
 
-Note: Application has been deployed using github pages, please checkout.
+Note: Application has been deployed using github pages, please checkout...
